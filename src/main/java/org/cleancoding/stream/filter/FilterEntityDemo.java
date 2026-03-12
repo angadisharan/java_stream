@@ -15,7 +15,7 @@ public class FilterEntityDemo {
                 .filter(e -> "Engineering".equals(e.getDepartment()))
                 .filter(e -> e.getSalary() >= 100_000)
                 .sorted(Comparator.comparingDouble(Employee::getSalary).reversed())
-                .toList(); //toList added in java 16 
+                .toList(); //toList added in java 16
 
         var inactiveEmployees = employees.stream()
                 .filter(e -> !e.isActive())

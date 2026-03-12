@@ -7,11 +7,13 @@ public class FilterDemo {
 
     public static void main(String[] args) {
 
+        // List.of(...) factory methods were added in Java 9.
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-        // List.of(...) rejects nulls; use a mutable list so we can demo null filtering.
+        // List.of(...) rejects nulls; use a mutable list so we can demo null filtering (still Java 9 feature).
         List<String> names = new java.util.ArrayList<>(List.of("  alice  ", "", "Bob", "anna", "Alex", "  ", "JOHN"));
         names.add(null);
 
+        // Stream.toList() was added in Java 16 (before that you would use collect(Collectors.toList())).
         var evens = numbers.stream()
                 .filter(n -> n % 2 == 0)
                 .toList();
@@ -25,6 +27,7 @@ public class FilterDemo {
         var cleanedNamesStartingWithA = names.stream()
                 .filter(Objects::nonNull)
                 .map(String::trim)
+                // isBlank() was added in Java 11.
                 .filter(s -> !s.isBlank())
                 .filter(s -> s.toLowerCase().startsWith("a"))
                 .toList();

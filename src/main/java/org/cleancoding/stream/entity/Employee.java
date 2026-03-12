@@ -49,6 +49,7 @@ public class Employee {
 
     /**
      * Static factory that returns a small sample list of employees.
+     * List.of(...) factory methods were introduced in Java 9.
      */
     public static java.util.List<Employee> sampleEmployees() {
         return java.util.List.of(
