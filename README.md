@@ -2,8 +2,10 @@
 
 ## Java version
 
-- **Minimum**: Java 8 (streams, `filter`, `map`, etc.)
-- **Recommended**: Java 16+ (for `Stream.toList()` and `List.of(...)` used in the demos)
+- **Minimum**: Java 8 (streams, `filter`, `map`, `Optional`, `Collectors.groupingBy`, `String.chars`, etc.)
+- **Java 9**: `List.of(...)` factory methods used for creating small immutable lists.
+- **Java 11**: `String.isBlank()` used in the string filter demo.
+- **Java 16+**: `Stream.toList()` used instead of `collect(Collectors.toList())`.
 
 ## Stream `filter()` demo
 
