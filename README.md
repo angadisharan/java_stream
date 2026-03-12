@@ -1,4 +1,4 @@
-# gof_design_patterns
+# Stream API Demo
 
 ## Java version
 
