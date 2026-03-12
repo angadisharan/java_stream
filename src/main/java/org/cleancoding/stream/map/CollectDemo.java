@@ -3,14 +3,13 @@ package org.cleancoding.stream.map;
 import org.cleancoding.stream.entity.Employee;
 
 import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
-public class MapEntity {
+public class CollectDemo {
 
     public static void main(String[] args) {
         List<Employee> employees = Employee.sampleEmployees();
-        
+
         // Collector: counting() -> count elements
         long totalEmployees = employees.stream()
                 .collect(Collectors.counting()); // Java 8
