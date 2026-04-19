@@ -19,7 +19,7 @@
 
 ```bash
 mvn -q -DskipTests package
-java -cp target/classes org.cleancoding.stream.filter.FilterDemo
+java -cp target/classes org.matools.stream.filter.FilterDemo
 ```
 
 ## Stream `filter()` with entities
@@ -34,5 +34,5 @@ java -cp target/classes org.cleancoding.stream.filter.FilterDemo
 
 ```bash
 mvn -q -DskipTests package
-java -cp target/classes org.cleancoding.stream.filter.FilterEntityDemo
+java -cp target/classes org.matools.stream.filter.FilterEntityDemo
 ```
