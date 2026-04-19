@@ -1,5 +1,7 @@
 package org.cleancoding.stream.entity;
 
+import java.util.Objects;
+
 public class Employee {
 
     private final long id;
@@ -60,5 +62,22 @@ public class Employee {
                 new Employee(5L, "Eve", "Engineering", 150_000, true),
                 new Employee(6L, "Frank", "Finance", 95_000, true)
         );
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Employee)) return false;
+        Employee e = (Employee) o;
+        return id == e.id &&
+                Double.compare(e.salary, salary) == 0 &&
+                active == e.active &&
+                Objects.equals(name, e.name) &&
+                Objects.equals(department, e.department);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, department, salary, active);
     }
 }
